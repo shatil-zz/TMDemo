@@ -3,6 +3,7 @@ import 'package:tm_demo/models/movie.dart';
 import 'package:tm_demo/screens/details/movie_detail_widget.dart';
 import 'package:tm_demo/screens/home/movie_home_widget.dart';
 import 'package:tm_demo/screens/home/search_view.dart';
+import 'package:tm_demo/screens/home/tv_home_widget.dart';
 import 'package:tm_demo/utils/app_routes.dart';
 import 'package:tm_demo/utils/size_utils.dart';
 
@@ -84,9 +85,7 @@ class _HomePageState extends State<HomePage> {
   Widget getSelectedWidget() {
     switch (selectedItemIndex) {
       case DrawerItems.tvShows:
-        return Container(
-          color: Theme.of(context).backgroundColor,
-        );
+        return const TvHomeWidget();
       default:
         return const MovieHomeWidget();
     }

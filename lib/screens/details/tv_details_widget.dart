@@ -4,57 +4,59 @@ import 'package:tm_demo/api/endpoints.dart';
 import 'package:tm_demo/base/base_resource.dart';
 import 'package:tm_demo/models/credits.dart';
 import 'package:tm_demo/models/movie.dart';
+import 'package:tm_demo/models/tv_show.dart';
 import 'package:tm_demo/screens/details/base_details_state.dart';
 import 'package:tm_demo/screens/details/movie_details_bloc.dart';
 import 'package:tm_demo/screens/details/scrolling_artists_widget.dart';
+import 'package:tm_demo/screens/details/tv_show_details_bloc.dart';
 import 'package:tm_demo/utils/size_utils.dart';
 import 'package:tm_demo/utils/widgets.dart';
 
-class MovieDetailPage extends StatefulWidget {
-  final Movie movie;
+class TvDetailPage extends StatefulWidget {
+  final TvShow tvShow;
 
-  const MovieDetailPage({Key? key, required this.movie}) : super(key: key);
+  const TvDetailPage({Key? key, required this.tvShow}) : super(key: key);
 
   @override
-  _MovieDetailPageState createState() => _MovieDetailPageState();
+  _TvDetailPageState createState() => _TvDetailPageState();
 }
 
-class _MovieDetailPageState extends BaseDetailsState<MovieDetailPage> {
+class _TvDetailPageState extends BaseDetailsState<TvDetailPage> {
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
-    Provider.of<MovieDetailsBloc>(context, listen: false)
-        .fetchCredits(widget.movie.id!);
+    Provider.of<TvShowDetailsBloc>(context, listen: false)
+        .fetchCredits(widget.tvShow.id!);
   }
 
   @override
   Widget build(BuildContext context) {
     return getDetailsWidget(
-        widget.movie.title,
-        widget.movie.backdropPath,
-        widget.movie.voteAverage,
-        widget.movie.genres,
-        widget.movie.overview,
-        widget.movie.posterPath,
+        widget.tvShow.title,
+        widget.tvShow.backdropPath,
+        widget.tvShow.voteAverage,
+        widget.tvShow.genres,
+        widget.tvShow.overview,
+        widget.tvShow.posterPath,
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            widget.movie.releaseDate != null
+            widget.tvShow.lastAirDate != null
                 ? Padding(
-                    padding: EdgeInsets.only(top: SizeUtils.normalPadding),
-                    child: Text(
-                      'Release date : ${widget.movie.releaseDate}',
-                      style: Theme.of(context).textTheme.bodyText1,
-                    ),
-                  )
+              padding: EdgeInsets.only(top: SizeUtils.normalPadding),
+              child: Text(
+                'Last air date : ${widget.tvShow.lastAirDate}',
+                style: Theme.of(context).textTheme.bodyText1,
+              ),
+            )
                 : Container(),
             StreamBuilder<Resource<Credits>>(
                 stream:
-                    Provider.of<MovieDetailsBloc>(context).getCreditList(),
+                Provider.of<TvShowDetailsBloc>(context).getCreditList(),
                 builder: (context, snapshot) {
                   Widget? messageWidget =
-                      getLoadingOrErrorWidget(snapshot.data);
+                  getLoadingOrErrorWidget(snapshot.data);
                   if (messageWidget == null && snapshot.data?.model != null) {
                     messageWidget = ScrollingArtists(
                       credits: (snapshot.data?.model)!,

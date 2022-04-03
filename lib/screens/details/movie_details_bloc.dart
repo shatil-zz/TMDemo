@@ -8,7 +8,7 @@ import 'package:tm_demo/models/credits.dart';
 class MovieDetailsBloc extends Bloc {
   final _creditsSubject = PublishSubject<Resource<Credits>>();
 
-  Stream<Resource<Credits>> getNowPlayingList() => _creditsSubject.stream;
+  Stream<Resource<Credits>> getCreditList() => _creditsSubject.stream;
 
   fetchCredits(int id) async {
     _creditsSubject.sink.add(Resource(status: ResourceStatus.loading));
@@ -17,5 +17,7 @@ class MovieDetailsBloc extends Bloc {
   }
 
   @override
-  void dispose() {}
+  void dispose() {
+    _creditsSubject.close();
+  }
 }

@@ -7,6 +7,7 @@ import 'package:tm_demo/api/services/movie_service.dart';
 import 'package:tm_demo/base/base_bloc.dart';
 import 'package:tm_demo/screens/details/movie_detail_widget.dart';
 import 'package:tm_demo/screens/details/movie_details_bloc.dart';
+import 'package:tm_demo/screens/details/tv_details_widget.dart';
 import 'package:tm_demo/screens/details/tv_show_details_bloc.dart';
 import 'package:tm_demo/screens/home/home_bloc.dart';
 import 'package:tm_demo/screens/home/home_page.dart';
@@ -53,12 +54,12 @@ class MyApp extends StatelessWidget {
         child:
             MovieDetailPage(movie: getArguments('movie', settings.arguments)),
       );
-    } else if (settings.name == AppRoutes.tvshowDetails) {
+    } else if (settings.name == AppRoutes.tvShowDetails) {
       _widget = Provider<TvShowDetailsBloc>(
         create: (context) => TvShowDetailsBloc(),
         dispose: disposeBloc,
         child:
-            MovieDetailPage(movie: getArguments('tv_show', settings.arguments)),
+            TvDetailPage(tvShow: getArguments('tv_show', settings.arguments)),
       );
     } else {
       _widget = Container(

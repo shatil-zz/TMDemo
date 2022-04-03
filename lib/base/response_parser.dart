@@ -1,18 +1,23 @@
 import 'package:tm_demo/models/credits.dart';
 import 'package:tm_demo/models/genres.dart';
 import 'package:tm_demo/models/movie.dart';
+import 'package:tm_demo/models/tv_show.dart';
 
 class ResponseParser {
   static T fromJson<T>(Map<String, dynamic> json) {
     switch (T) {
       case Movie:
         return Movie.fromJson(json) as T;
+      case TvShow:
+        return TvShow.fromJson(json) as T;
       case Credits:
         return Credits.fromJson(json) as T;
       case Genres:
         return Genres.fromJson(json) as T;
       case MovieList:
         return MovieList.fromJson(json) as T;
+      case TvShowList:
+        return TvShowList.fromJson(json) as T;
     }
     throw UnimplementedError("Model not added in ResponseParser");
   }
