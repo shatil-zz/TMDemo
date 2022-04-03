@@ -11,6 +11,8 @@ class ResponseParser {
         return Credits.fromJson(json) as T;
       case Genres:
         return Genres.fromJson(json) as T;
+      case MovieList:
+        return MovieList.fromJson(json) as T;
     }
     throw UnimplementedError("Model not added in ResponseParser");
   }

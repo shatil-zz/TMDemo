@@ -3,6 +3,7 @@ import 'package:tm_demo/models/movie.dart';
 import 'package:tm_demo/screens/details/movie_detail_widget.dart';
 import 'package:tm_demo/screens/home/movie_home_widget.dart';
 import 'package:tm_demo/screens/home/search_view.dart';
+import 'package:tm_demo/utils/app_routes.dart';
 import 'package:tm_demo/utils/size_utils.dart';
 
 class HomePage extends StatefulWidget {
@@ -34,10 +35,8 @@ class _HomePageState extends State<HomePage> {
               final Movie? result = await showSearch<Movie?>(
                   context: context, delegate: MovieSearch());
               if (result != null) {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => MovieDetailPage(movie: result)));
+                Navigator.pushNamed(context, AppRoutes.movieDetails,
+                    arguments: {'movie': result});
               }
             },
           )
@@ -73,8 +72,7 @@ class _HomePageState extends State<HomePage> {
     });
   }
 
-  String getTitle()
-  {
+  String getTitle() {
     switch (selectedItemIndex) {
       case DrawerItems.tvShows:
         return "TV Shows";

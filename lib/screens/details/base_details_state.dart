@@ -133,7 +133,7 @@ abstract class BaseDetailsState<T extends StatefulWidget> extends State<T> {
                                 : FadeInImage(
                                     image: NetworkImage(TMDB_BASE_IMAGE_URL +
                                         'w500/' +
-                                        posterPath!),
+                                        posterPath),
                                     fit: BoxFit.cover,
                                     placeholder: const AssetImage(
                                         'assets/images/loading.gif'),

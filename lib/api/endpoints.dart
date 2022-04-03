@@ -2,14 +2,6 @@ import 'package:tm_demo/api/api_constants.dart';
 import 'package:tm_demo/api/api_key.dart';
 
 class Endpoints {
-  static String discoverMoviesUrl(int page) {
-    return '$TMDB_API_BASE_URL'
-        '/discover/movie?api_key='
-        '$TMDB_API_KEY'
-        '&language=en-US&sort_by=popularity'
-        '.desc&include_adult=false&include_video=false&page'
-        '=$page';
-  }
 
   static String nowPlayingMoviesUrl(int page) {
     return '$TMDB_API_BASE_URL'

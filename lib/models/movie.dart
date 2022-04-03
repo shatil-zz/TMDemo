@@ -65,7 +65,7 @@ class Movie {
     posterPath = json['poster_path'];
     originalLanguage = json['original_language'];
     originalTitle = json['original_title'];
-    genres = ResponseParser.fromList(json['genres']);
+    genres = ResponseParser.fromList(json['genres']??[]);
     backdropPath = json['backdrop_path'];
     adult = json['adult'];
     overview = json['overview'];

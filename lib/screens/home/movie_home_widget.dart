@@ -1,13 +1,35 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:tm_demo/api/endpoints.dart';
+import 'package:tm_demo/screens/home/home_bloc.dart';
 import 'package:tm_demo/screens/home/scrolling_movies_widget.dart';
 
-class MovieHomeWidget extends StatelessWidget {
+class MovieHomeWidget extends StatefulWidget {
   const MovieHomeWidget({Key? key}) : super(key: key);
 
   @override
+  State<StatefulWidget> createState() {
+    return MovieHomeState();
+  }
+}
+
+class MovieHomeState extends State<MovieHomeWidget> {
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    fetchMovieList();
+  }
+
+  fetchMovieList() async {
+    HomeBloc bloc=Provider.of(context,listen: false);
+    await bloc.fetchNowPlayingMovieList();
+    await bloc.fetchUpcomingMovieList();
+    await bloc.fetchTopRatedMovieList();
+  }
+
+  @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Container(
       color: Theme.of(context).primaryColor,
       child: ListView(
@@ -15,15 +37,15 @@ class MovieHomeWidget extends StatelessWidget {
         children: <Widget>[
           ScrollingMoviesWidget(
             title: 'Now Playing',
-            api: Endpoints.nowPlayingMoviesUrl(1),
+            stream: Provider.of<HomeBloc>(context).getNowPlayingList(),
           ),
           ScrollingMoviesWidget(
             title: 'Upcoming Movies',
-            api: Endpoints.upcomingMoviesUrl(1),
+            stream: Provider.of<HomeBloc>(context).getUpcomingList(),
           ),
           ScrollingMoviesWidget(
             title: 'Top Rated',
-            api: Endpoints.topRatedUrl(1),
+            stream: Provider.of<HomeBloc>(context).getTopRatedList(),
           ),
         ],
       ),
