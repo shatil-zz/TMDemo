@@ -6,6 +6,7 @@ import 'package:tm_demo/api/api_key.dart';
 import 'package:tm_demo/api/services/movie_service.dart';
 import 'package:tm_demo/base/base_bloc.dart';
 import 'package:tm_demo/screens/details/movie_detail_widget.dart';
+import 'package:tm_demo/screens/details/movie_details_bloc.dart';
 import 'package:tm_demo/screens/details/tv_show_details_bloc.dart';
 import 'package:tm_demo/screens/home/home_bloc.dart';
 import 'package:tm_demo/screens/home/home_page.dart';
@@ -46,8 +47,8 @@ class MyApp extends StatelessWidget {
   Route getGenerateRoute(RouteSettings settings) {
     Widget _widget;
     if (settings.name == AppRoutes.movieDetails) {
-      _widget = Provider<HomeBloc>(
-        create: (context) => HomeBloc(),
+      _widget = Provider<MovieDetailsBloc>(
+        create: (context) => MovieDetailsBloc(),
         dispose: disposeBloc,
         child:
             MovieDetailPage(movie: getArguments('movie', settings.arguments)),
