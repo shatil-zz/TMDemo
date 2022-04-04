@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:tm_demo/api/api_constants.dart';
 import 'package:tm_demo/base/base_resource.dart';
-import 'package:tm_demo/models/function.dart';
+
 import 'package:tm_demo/models/movie.dart';
 import 'package:tm_demo/screens/details/movie_detail_widget.dart';
 import 'package:tm_demo/screens/home/home_bloc.dart';

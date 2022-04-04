@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:tm_demo/models/movie.dart';
+import 'package:tm_demo/models/tv_show.dart';
 import 'package:tm_demo/screens/details/movie_detail_widget.dart';
 import 'package:tm_demo/screens/home/movie_home_widget.dart';
-import 'package:tm_demo/screens/home/search_view.dart';
+import 'package:tm_demo/screens/search/movie_search_view.dart';
+import 'package:tm_demo/screens/search/search_view.dart';
 import 'package:tm_demo/screens/home/tv_home_widget.dart';
+import 'package:tm_demo/screens/search/tv_search_view.dart';
 import 'package:tm_demo/utils/app_routes.dart';
 import 'package:tm_demo/utils/size_utils.dart';
 
@@ -32,14 +35,7 @@ class _HomePageState extends State<HomePage> {
         actions: <Widget>[
           IconButton(
             icon: const Icon(Icons.search),
-            onPressed: () async {
-              final Movie? result = await showSearch<Movie?>(
-                  context: context, delegate: MovieSearch());
-              if (result != null) {
-                Navigator.pushNamed(context, AppRoutes.movieDetails,
-                    arguments: {'movie': result});
-              }
-            },
+            onPressed: expandSearchView,
           )
         ],
       ),
@@ -64,6 +60,26 @@ class _HomePageState extends State<HomePage> {
       ),
       body: getSelectedWidget(),
     );
+  }
+
+  expandSearchView() async {
+    switch (selectedItemIndex) {
+      case DrawerItems.tvShows:
+        final TvShow? result = await showSearch<TvShow?>(
+            context: context, delegate: TvSearchView());
+        if (result != null) {
+          Navigator.pushNamed(context, AppRoutes.tvShowDetails,
+              arguments: {'tv_show': result});
+        }
+        return;
+      default:
+        final Movie? result = await showSearch<Movie?>(
+            context: context, delegate: MovieSearchView());
+        if (result != null) {
+          Navigator.pushNamed(context, AppRoutes.movieDetails,
+              arguments: {'movie': result});
+        }
+    }
   }
 
   updateSelectedIndex(DrawerItems itemId) {

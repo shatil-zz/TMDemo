@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:tm_demo/api/endpoints.dart';
 import 'package:tm_demo/base/base_resource.dart';
 import 'package:tm_demo/models/credits.dart';
 import 'package:tm_demo/models/movie.dart';

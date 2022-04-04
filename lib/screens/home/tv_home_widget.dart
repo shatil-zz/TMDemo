@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:tm_demo/api/endpoints.dart';
+
 import 'package:tm_demo/screens/home/home_bloc.dart';
 import 'package:tm_demo/screens/home/scrolling_movies_widget.dart';
 import 'package:tm_demo/screens/home/scrolling_tv_widget.dart';

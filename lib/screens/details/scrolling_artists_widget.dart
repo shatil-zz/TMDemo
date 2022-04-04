@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tm_demo/api/api_constants.dart';
 import 'package:tm_demo/models/credits.dart';
-import 'package:tm_demo/models/function.dart';
+
 
 class ScrollingArtists extends StatelessWidget {
   final Credits credits;

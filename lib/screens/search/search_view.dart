@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:tm_demo/models/movie.dart';
-import 'package:tm_demo/screens/search/search_movie_widget.dart';
+import 'package:tm_demo/screens/search/movie_search_result_widget.dart';
 
-class MovieSearch extends SearchDelegate<Movie?> {
-  MovieSearch();
+abstract class SearchView<T> extends SearchDelegate<T?> {
+  String getSuggestionText();
+
+  SearchView();
 
   @override
   ThemeData appBarTheme(BuildContext context) {
@@ -13,7 +15,6 @@ class MovieSearch extends SearchDelegate<Movie?> {
         textTheme: TextTheme(
           headline6: Theme.of(context).textTheme.headline1,
         ));
-
     return theme;
   }
 
@@ -46,16 +47,6 @@ class MovieSearch extends SearchDelegate<Movie?> {
   }
 
   @override
-  Widget buildResults(BuildContext context) {
-    return SearchMovieWidget(
-      query: query,
-      onTap: (movie) {
-        close(context, movie);
-      },
-    );
-  }
-
-  @override
   Widget buildSuggestions(BuildContext context) {
     return Container(
       color: Theme.of(context).primaryColor,
@@ -73,7 +64,7 @@ class MovieSearch extends SearchDelegate<Movie?> {
               color: Theme.of(context).primaryColor,
             ),
           ),
-          Text('Enter a Movie to search.',
+          Text(getSuggestionText(),
               style: Theme.of(context).textTheme.bodyText1)
         ],
       )),
