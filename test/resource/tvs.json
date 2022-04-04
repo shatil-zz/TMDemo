@@ -1,0 +1,395 @@
+{
+  "page": 1,
+  "results": [
+    {
+      "backdrop_path": "/i3GAgdr3adKPMI8FVxdXZuqiAQl.jpg",
+      "first_air_date": "2017-09-25",
+      "genre_ids": [
+        18
+      ],
+      "id": 71712,
+      "name": "The Good Doctor",
+      "origin_country": [
+        "US"
+      ],
+      "original_language": "en",
+      "original_name": "The Good Doctor",
+      "overview": "Shaun Murphy, a young surgeon with autism and savant syndrome, relocates from a quiet country life to join a prestigious hospital's surgical unit. Unable to personally connect with those around him, Shaun uses his extraordinary medical gifts to save lives and challenge the skepticism of his colleagues.",
+      "popularity": 1291.032,
+      "poster_path": "/cXUqtadGsIcZDWUTrfnbDjAy8eN.jpg",
+      "vote_average": 8.5,
+      "vote_count": 10368
+    },
+    {
+      "backdrop_path": "/ykbaElzavtSbsYG5KbG3pEpREtK.jpg",
+      "first_air_date": "2021-01-11",
+      "genre_ids": [
+        10764
+      ],
+      "id": 116416,
+      "name": "Big Brother 7/7",
+      "origin_country": [
+        "CA"
+      ],
+      "original_language": "fr",
+      "original_name": "Big Brother 7/7",
+      "overview": "",
+      "popularity": 561.067,
+      "poster_path": "/iUYrQyv0p4UncFolsROm81VNbcB.jpg",
+      "vote_average": 3.5,
+      "vote_count": 7
+    },
+    {
+      "backdrop_path": "/bytULo2QRTgkn7Qu9pgJSSjS1NJ.jpg",
+      "first_air_date": "2022-02-07",
+      "genre_ids": [
+        18,
+        10766
+      ],
+      "id": 154911,
+      "name": "Além da Ilusão",
+      "origin_country": [
+        "BR"
+      ],
+      "original_language": "pt",
+      "original_name": "Além da Ilusão",
+      "overview": "",
+      "popularity": 767.973,
+      "poster_path": "/8BzuwDAMamf5TX4TepbDDEq7ima.jpg",
+      "vote_average": 8,
+      "vote_count": 1
+    },
+    {
+      "backdrop_path": "/uJFGkVOIuqzzrgffrefmFHN2qT9.jpg",
+      "first_air_date": "2022-01-24",
+      "genre_ids": [
+        18
+      ],
+      "id": 125030,
+      "name": "The Broken Marriage Vow",
+      "origin_country": [
+        "PH"
+      ],
+      "original_language": "tl",
+      "original_name": "The Broken Marriage Vow",
+      "overview": "A seemingly perfect home gets shattered by broken trust and infidelity, bringing forth catastrophic effects into the lives of the couple, their son, and everyone else involved. This is a story about a woman scorned.",
+      "popularity": 764.821,
+      "poster_path": "/gBJIKWkI90L57ky6EUzQGE6wWpJ.jpg",
+      "vote_average": 5.7,
+      "vote_count": 10
+    },
+    {
+      "backdrop_path": "/l6zdjUDOaklBWfxqa7AtbLr2EnA.jpg",
+      "first_air_date": "2021-12-13",
+      "genre_ids": [
+        10751,
+        35,
+        18
+      ],
+      "id": 135753,
+      "name": "Love Twist",
+      "origin_country": [
+        "KR"
+      ],
+      "original_language": "ko",
+      "original_name": "사랑의 꽈배기",
+      "overview": "A drama depicting a sweet twist in love between the parents and children of three families around the love of two main characters.",
+      "popularity": 711.708,
+      "poster_path": "/5bTF522eYn6g6r7aYqFpTZzmQq6.jpg",
+      "vote_average": 5,
+      "vote_count": 3
+    },
+    {
+      "backdrop_path": "/2748H9LoK2oQd9L7ofze8VjCGhS.jpg",
+      "first_air_date": "2020-07-13",
+      "genre_ids": [
+        18,
+        10766
+      ],
+      "id": 116479,
+      "name": "Anupamaa",
+      "origin_country": [
+        "IN"
+      ],
+      "original_language": "hi",
+      "original_name": "अनुपमा",
+      "overview": "Anupama had to sacrifice a lot to become an ideal wife, daughter-in-law, and mother. After a bitter realisation, she sets out to live on her own terms.",
+      "popularity": 597.233,
+      "poster_path": "/9R4Qtm01pNh0CzdoIyvHKefe5RL.jpg",
+      "vote_average": 4.4,
+      "vote_count": 23
+    },
+    {
+      "backdrop_path": "/r8CGqB8IJNbA1IruHWquS7YttNB.jpg",
+      "first_air_date": "1995-10-23",
+      "genre_ids": [
+        10766
+      ],
+      "id": 966,
+      "name": "Hollyoaks",
+      "origin_country": [
+        "GB"
+      ],
+      "original_language": "en",
+      "original_name": "Hollyoaks",
+      "overview": "The daily soap that follows the loves, lives and misdemeanours of a group of people living in the Chester village of Hollyoaks where anything could, and frequently does, happen...",
+      "popularity": 587.573,
+      "poster_path": "/bpmLMZP3M1vLujPqHnOTnKVjRJY.jpg",
+      "vote_average": 5.3,
+      "vote_count": 38
+    },
+    {
+      "backdrop_path": "/3dA5J6extpnHSXxRpf2FeBnC8u9.jpg",
+      "first_air_date": "2022-01-31",
+      "genre_ids": [
+        18
+      ],
+      "id": 156918,
+      "name": "Bunt!",
+      "origin_country": [
+        "PL"
+      ],
+      "original_language": "pl",
+      "original_name": "Bunt!",
+      "overview": "",
+      "popularity": 582.25,
+      "poster_path": "/zkeikojLJGPKe4hOVuJCj7t2GzS.jpg",
+      "vote_average": 4,
+      "vote_count": 2
+    },
+    {
+      "backdrop_path": "/bX6embf0yknbV6R5NVUwM60FQXG.jpg",
+      "first_air_date": "2021-11-22",
+      "genre_ids": [
+        10766,
+        35
+      ],
+      "id": 139009,
+      "name": "A Life to Die For",
+      "origin_country": [
+        "BR"
+      ],
+      "original_language": "pt",
+      "original_name": "Quanto Mais Vida, Melhor!",
+      "overview": "Tells the story of the quartet formed by a friendly and bankrupt ex-football player, a rich and snobby surgeon, a powerful and arrogant executive and a scammer with a heart of stone. They are victims of a plane crash on the same day they met each other and end up dying. When they meet Death, they are told that their time to go has not yet come and that they must return to life to deal with their personal issues. However, Death warns that, in a year, one of them will actually die and the four decide to take this second chance to achieve their greatest goals in life.",
+      "popularity": 554.476,
+      "poster_path": "/ydtfMZMu04L5noElS35BespN8rV.jpg",
+      "vote_average": 2.5,
+      "vote_count": 6
+    },
+    {
+      "backdrop_path": "/wC21ODo7CREmb9dEgCX7Qy2UhA8.jpg",
+      "first_air_date": "1995-12-23",
+      "genre_ids": [],
+      "id": 14506,
+      "name": "Thuis",
+      "origin_country": [
+        "BE"
+      ],
+      "original_language": "nl",
+      "original_name": "Thuis",
+      "overview": "Thuis is a Belgian television soap opera, which airs on één, which is in the hands of VRT, the national broadcasting channel of the Dutch-speaking region of Belgium.\n\nThuis first aired on 23 December 1995, featuring Pol Goossen, Janine Bischops, Merel De Vilder Robier, Sally-Jane Van Horebeeck, Annick Segal, Monika Van Lierde, Rik Andries and the late Donald Madder.\n\nThuis grew to become Flanders' number one soap, gaining 900,000 viewers, and therefore beating competing channel vtm's soap operas Familie and former series Wittekerke. Thuis is currently in its 18th season. On May 27, 2011 episode number 3000 was aired.",
+      "popularity": 493.308,
+      "poster_path": "/nrTGCUytgvWjKlZtFXKuDNI30aw.jpg",
+      "vote_average": 7,
+      "vote_count": 3
+    },
+    {
+      "backdrop_path": "/yvKrycViRMQcIgdnjsM5JGNWU4Q.jpg",
+      "first_air_date": "2013-04-07",
+      "genre_ids": [
+        10765,
+        16,
+        10759
+      ],
+      "id": 1429,
+      "name": "Attack on Titan",
+      "origin_country": [
+        "JP"
+      ],
+      "original_language": "ja",
+      "original_name": "進撃の巨人",
+      "overview": "Several hundred years ago, humans were nearly exterminated by Titans. Titans are typically several stories tall, seem to have no intelligence, devour human beings and, worst of all, seem to do it for the pleasure rather than as a food source. A small percentage of humanity survived by walling themselves in a city protected by extremely high walls, even taller than the biggest Titans. Flash forward to the present and the city has not seen a Titan in over 100 years. Teenage boy Eren and his foster sister Mikasa witness something horrific as the city walls are destroyed by a Colossal Titan that appears out of thin air. As the smaller Titans flood the city, the two kids watch in horror as their mother is eaten alive. Eren vows that he will murder every single Titan and take revenge for all of mankind.",
+      "popularity": 321.772,
+      "poster_path": "/aiy35Evcofzl7hASZZvsFgltHTX.jpg",
+      "vote_average": 8.6,
+      "vote_count": 4089
+    },
+    {
+      "backdrop_path": null,
+      "first_air_date": "2019-02-17",
+      "genre_ids": [
+        10763,
+        10768
+      ],
+      "id": 154490,
+      "name": "From the Second Side with Guy Zohar",
+      "origin_country": [
+        "IL"
+      ],
+      "original_language": "he",
+      "original_name": "מהצד השני עם גיא זוהר",
+      "overview": "Unpacking current events with retrospective.",
+      "popularity": 434.295,
+      "poster_path": "/5qx3EXkkSYHuOAyLDyeITv9xnyy.jpg",
+      "vote_average": 0,
+      "vote_count": 0
+    },
+    {
+      "backdrop_path": null,
+      "first_air_date": "2020-05-24",
+      "genre_ids": [
+        10763
+      ],
+      "id": 153466,
+      "name": "משחקי הכיס",
+      "origin_country": [
+        "IL"
+      ],
+      "original_language": "he",
+      "original_name": "משחקי הכיס",
+      "overview": "Kan's daily program on economics",
+      "popularity": 426.598,
+      "poster_path": "/jfm0SM8BEQUF57EWFOi9rF4cYB3.jpg",
+      "vote_average": 0,
+      "vote_count": 0
+    },
+    {
+      "backdrop_path": "/qqWn3Mov1hxtEcMK7gPvok1TO0E.jpg",
+      "first_air_date": "2021-01-10",
+      "genre_ids": [
+        10764
+      ],
+      "id": 113207,
+      "name": "Big Brother Célébrités",
+      "origin_country": [
+        "CA"
+      ],
+      "original_language": "fr",
+      "original_name": "Big Brother Célébrités",
+      "overview": "",
+      "popularity": 414.291,
+      "poster_path": "/rXJoUCx5wDxkeKhvw7hlH5KAliF.jpg",
+      "vote_average": 1.5,
+      "vote_count": 2
+    },
+    {
+      "backdrop_path": null,
+      "first_air_date": "2020-10-26",
+      "genre_ids": [
+        10767
+      ],
+      "id": 111995,
+      "name": "Che succ3de?",
+      "origin_country": [
+        "IT"
+      ],
+      "original_language": "it",
+      "original_name": "Che succ3de?",
+      "overview": "Che succ3de? is the new tv shows of Geppi Cucciari.",
+      "popularity": 372.439,
+      "poster_path": null,
+      "vote_average": 0,
+      "vote_count": 0
+    },
+    {
+      "backdrop_path": null,
+      "first_air_date": "2021-03-29",
+      "genre_ids": [
+        10763
+      ],
+      "id": 119903,
+      "name": "Noovo Le Fil 17",
+      "origin_country": [
+        "CA"
+      ],
+      "original_language": "fr",
+      "original_name": "Noovo Le Fil 17",
+      "overview": "",
+      "popularity": 358.387,
+      "poster_path": "/ppPQS4XAUTguEVKWl4HRye4H7BU.jpg",
+      "vote_average": 1.3,
+      "vote_count": 3
+    },
+    {
+      "backdrop_path": "/uu52dx6l1yFN7f60GPhgQFPfOvT.jpg",
+      "first_air_date": "2018-01-01",
+      "genre_ids": [
+        10751,
+        35
+      ],
+      "id": 81772,
+      "name": "Oteckovia",
+      "origin_country": [
+        "SK"
+      ],
+      "original_language": "sk",
+      "original_name": "Oteckovia",
+      "overview": "",
+      "popularity": 343.039,
+      "poster_path": "/r1hDy1wJ52NEilfcSzs0ocHEJZl.jpg",
+      "vote_average": 7.7,
+      "vote_count": 6
+    },
+    {
+      "backdrop_path": null,
+      "first_air_date": "2021-03-29",
+      "genre_ids": [
+        10763
+      ],
+      "id": 122151,
+      "name": "Noovo Le Fil 22",
+      "origin_country": [
+        "CA"
+      ],
+      "original_language": "fr",
+      "original_name": "Noovo Le Fil 22",
+      "overview": "",
+      "popularity": 338.983,
+      "poster_path": "/x70JHANtSvS8IiTadaDrXY1PQBB.jpg",
+      "vote_average": 1,
+      "vote_count": 1
+    },
+    {
+      "backdrop_path": null,
+      "first_air_date": "2021-03-29",
+      "genre_ids": [
+        10763
+      ],
+      "id": 122152,
+      "name": "Noovo Le Fil Québec",
+      "origin_country": [
+        "CA"
+      ],
+      "original_language": "fr",
+      "original_name": "Noovo Le Fil Québec",
+      "overview": "",
+      "popularity": 338.355,
+      "poster_path": "/kdpM5Iz37EWi6hRMWZvrQRxTpEF.jpg",
+      "vote_average": 10,
+      "vote_count": 1
+    },
+    {
+      "backdrop_path": null,
+      "first_air_date": "",
+      "genre_ids": [
+        10763,
+        10768
+      ],
+      "id": 155082,
+      "name": "העולם היום",
+      "origin_country": [
+        "IL"
+      ],
+      "original_language": "he",
+      "original_name": "העולם היום",
+      "overview": "Kan's international news program.",
+      "popularity": 335.091,
+      "poster_path": null,
+      "vote_average": 0,
+      "vote_count": 0
+    }
+  ],
+  "total_pages": 15,
+  "total_results": 293
+}

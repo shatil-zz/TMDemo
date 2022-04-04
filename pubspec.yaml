@@ -39,8 +39,11 @@ dependencies:
   http: ^0.13.4
   get_it: ^7.2.0
   rxdart: ^0.27.3
+  mockito: ^5.1.0
 
 dev_dependencies:
+  integration_test:
+    sdk: flutter
   flutter_test:
     sdk: flutter
 
