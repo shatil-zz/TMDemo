@@ -47,7 +47,7 @@ class HomeBloc extends Bloc {
   fetchToRattedTvList({int page = 1}) async {
     _popularTvListSubject.sink.add(Resource(status: ResourceStatus.loading));
     _popularTvListSubject.sink.add(
-        await getIt.get<TvShowApiService>().getTvShowList(typUpcoming, page));
+        await getIt.get<TvShowApiService>().getTvShowList(typeTopRated, page));
   }
 
   fetchNowPlayingMovieList({int page = 1}) async {

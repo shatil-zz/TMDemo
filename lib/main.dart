@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 import 'package:tm_demo/api/api_client.dart';
 import 'package:tm_demo/api/api_key.dart';
 import 'package:tm_demo/api/services/movie_service.dart';
+import 'package:tm_demo/api/services/tv_show_service.dart';
 import 'package:tm_demo/base/base_bloc.dart';
 import 'package:tm_demo/screens/details/movie_detail_widget.dart';
 import 'package:tm_demo/screens/details/movie_details_bloc.dart';
@@ -25,6 +26,7 @@ registerDependencies()
 {
   getIt.registerSingleton(ApiClient(TMDB_API_KEY));
   getIt.registerFactory<MovieApiService>(() => MovieApiService());
+  getIt.registerFactory<TvShowApiService>(() => TvShowApiService());
 }
 
 class MyApp extends StatelessWidget {

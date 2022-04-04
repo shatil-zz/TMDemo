@@ -60,7 +60,7 @@ class TvShow {
     id = json['id'];
     video = json['video'];
     voteAverage = json['vote_average'].toString();
-    title = json['title'];
+    title = json['name'];
     popularity = json['popularity'];
     posterPath = json['poster_path'];
     originalLanguage = json['original_language'];

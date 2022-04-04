@@ -29,7 +29,7 @@ class Movie {
   bool? video;
   String? voteAverage;
   String? title;
-  double? popularity;
+  dynamic popularity;
   String? posterPath;
   String? originalLanguage;
   String? originalTitle;

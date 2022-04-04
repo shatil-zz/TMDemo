@@ -39,7 +39,7 @@ class ImageTitleItem extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Text(
-                  title!,
+                  title??"",
                   style: Theme.of(context).textTheme.bodyText1,
                   overflow: TextOverflow.ellipsis,
                 ),
