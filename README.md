@@ -19,6 +19,9 @@ Bloc with provider, rxDart and get_it as service locator
 - flutter pub get
 - flutter run
 
+#API KEY
+- Replace value of 'TMDB_API_KEY' key with your api key
+
 # Test
 - Unit test
 - Widget test
