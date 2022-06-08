@@ -1,1 +1,1 @@
-const String TMDB_API_KEY = "your api key";
+const String TMDB_API_KEY = "a4d0253992431d9e1c9eb0044d03bcc8";
