@@ -17,7 +17,7 @@ class TvSearchView extends SearchView<TvShow> {
   @override
   Widget buildResults(BuildContext context) {
     return Provider<SearchBloc>(
-      create: (context) => SearchBloc(),
+      create: (context) => SearchBloc(context),
       dispose: (BuildContext context, Bloc bloc) => bloc.dispose(),
       child: TvSearchResultWidget(
         query: query,

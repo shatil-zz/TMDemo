@@ -17,7 +17,7 @@ class MovieSearchView extends SearchView<Movie> {
   @override
   Widget buildResults(BuildContext context) {
     return Provider<SearchBloc>(
-      create: (context) => SearchBloc(),
+      create: (context) => SearchBloc(context),
       dispose: (BuildContext context, Bloc bloc) => bloc.dispose(),
       child: MovieSearchResultWidget(
         query: query,

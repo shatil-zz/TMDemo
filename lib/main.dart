@@ -22,8 +22,8 @@ void main() {
   registerDependencies();
   runApp(const MyApp());
 }
-registerDependencies()
-{
+
+registerDependencies() {
   getIt.registerSingleton(ApiClient(TMDB_API_KEY));
   getIt.registerFactory<MovieApiService>(() => MovieApiService());
   getIt.registerFactory<TvShowApiService>(() => TvShowApiService());
@@ -38,41 +38,49 @@ class MyApp extends StatelessWidget {
       title: 'TMDemo',
       debugShowCheckedModeBanner: false,
       theme: buildAppTheme(),
-      home: Provider<HomeBloc>(
-        create: (context) => HomeBloc(),
-        dispose: disposeBloc,
-        child: const HomePage(),
-      ),
+      home: getNavigableWidget<HomeBloc>(
+          child: const HomePage(), createBloc: (context) => HomeBloc(context)),
       onGenerateRoute: getGenerateRoute,
     );
   }
 
   Route getGenerateRoute(RouteSettings settings) {
     Widget _widget;
-    if (settings.name == AppRoutes.movieDetails) {
-      _widget = Provider<MovieDetailsBloc>(
-        create: (context) => MovieDetailsBloc(),
-        dispose: disposeBloc,
-        child:
-            MovieDetailPage(movie: getArguments('movie', settings.arguments)),
-      );
-    } else if (settings.name == AppRoutes.tvShowDetails) {
-      _widget = Provider<TvShowDetailsBloc>(
-        create: (context) => TvShowDetailsBloc(),
-        dispose: disposeBloc,
-        child:
-            TvDetailPage(tvShow: getArguments('tv_show', settings.arguments)),
-      );
-    } else {
-      _widget = Container(
-        color: Colors.white,
-      );
+    switch (settings.name) {
+      case AppRoutes.movieDetails:
+        _widget = getNavigableWidget<MovieDetailsBloc>(
+          child: const MovieDetailPage(),
+          createBloc: (context) => MovieDetailsBloc(
+              context, getArguments('movie', settings.arguments)),
+        );
+        break;
+      case AppRoutes.tvShowDetails:
+        _widget = getNavigableWidget<TvShowDetailsBloc>(
+          child:
+              TvDetailPage(tvShow: getArguments('tv_show', settings.arguments)),
+          createBloc: (context) => TvShowDetailsBloc(context),
+        );
+        break;
+      default:
+        _widget = Container(
+          color: Colors.white,
+        );
     }
     return _createRoute(settings, _widget);
   }
 
-  disposeBloc(BuildContext context, Bloc bloc) {
-    bloc.dispose();
+  Widget getNavigableWidget<T extends Bloc>(
+      {required Widget child,
+      required T Function(BuildContext context) createBloc}) {
+    return Provider<T>(
+      create: (context) {
+        T bloc = createBloc(context);
+        bloc.init();
+        return bloc;
+      },
+      dispose: (context, bloc) => bloc.dispose(),
+      child: child,
+    );
   }
 
   Route _createRoute(final RouteSettings _settings, final _widget) {

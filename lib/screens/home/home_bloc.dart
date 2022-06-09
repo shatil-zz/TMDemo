@@ -1,3 +1,4 @@
+import 'package:flutter/src/widgets/framework.dart';
 import 'package:rxdart/rxdart.dart';
 import 'package:tm_demo/api/services/movie_service.dart';
 import 'package:tm_demo/api/services/tv_show_service.dart';
@@ -8,13 +9,15 @@ import 'package:tm_demo/models/movie.dart';
 import 'package:tm_demo/models/tv_show.dart';
 
 class HomeBloc extends Bloc {
-  final _airingTvListSubject = PublishSubject<Resource<TvShowList>>();
-  final _popularTvListSubject = PublishSubject<Resource<TvShowList>>();
-  final _topRatedTvListSubject = PublishSubject<Resource<TvShowList>>();
+  final _airingTvListSubject = BehaviorSubject<Resource<TvShowList>>();
+  final _popularTvListSubject = BehaviorSubject<Resource<TvShowList>>();
+  final _topRatedTvListSubject = BehaviorSubject<Resource<TvShowList>>();
 
-  final _nowPlayingListSubject = PublishSubject<Resource<MovieList>>();
-  final _upcomingListSubject = PublishSubject<Resource<MovieList>>();
-  final _topRatedListSubject = PublishSubject<Resource<MovieList>>();
+  final _nowPlayingListSubject = BehaviorSubject<Resource<MovieList>>();
+  final _upcomingListSubject = BehaviorSubject<Resource<MovieList>>();
+  final _topRatedListSubject = BehaviorSubject<Resource<MovieList>>();
+
+  HomeBloc(BuildContext context) : super(context);
 
   Stream<Resource<MovieList>> getNowPlayingList() =>
       _nowPlayingListSubject.stream;
@@ -66,6 +69,13 @@ class HomeBloc extends Bloc {
     _upcomingListSubject.sink.add(Resource(status: ResourceStatus.loading));
     _upcomingListSubject.sink.add(
         await getIt.get<MovieApiService>().getMovieList(typUpcoming, page));
+  }
+
+
+
+
+  @override
+  void init() {
   }
 
   @override

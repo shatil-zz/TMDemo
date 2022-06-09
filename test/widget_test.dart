@@ -22,7 +22,7 @@ void main() {
   });
   group('Home widget test', () {
     Widget widget = Provider<HomeBloc>(
-      create: (context) => HomeBloc(),
+      create: (context) => HomeBloc(context),
       dispose: disposeBloc,
       child: const HomePage(),
     );

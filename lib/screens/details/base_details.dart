@@ -6,8 +6,10 @@ import 'package:tm_demo/screens/details/genre_widget.dart';
 import 'package:tm_demo/screens/details/scrolling_artists_widget.dart';
 import 'package:tm_demo/utils/size_utils.dart';
 
-abstract class BaseDetailsState<T extends StatefulWidget> extends State<T> {
+class BaseDetails{
+
   Widget getDetailsWidget(
+      BuildContext context,
       String? title,
       String? backdropPath,
       String? averageVote,
@@ -18,10 +20,10 @@ abstract class BaseDetailsState<T extends StatefulWidget> extends State<T> {
     return Scaffold(
       body: Stack(
         children: <Widget>[
-          getBackdropWidget(backdropPath),
+          getBackdropWidget(context, backdropPath),
           Column(
             children: <Widget>[
-              getAppBarWidget(),
+              getAppBarWidget(context),
               Expanded(
                 child: Container(
                   color: Colors.transparent,
@@ -51,7 +53,7 @@ abstract class BaseDetailsState<T extends StatefulWidget> extends State<T> {
                                           CrossAxisAlignment.start,
                                       children: <Widget>[
                                         Text(
-                                          title??"",
+                                          title ?? "",
                                           style: Theme.of(context)
                                               .textTheme
                                               .headline5,
@@ -63,7 +65,7 @@ abstract class BaseDetailsState<T extends StatefulWidget> extends State<T> {
                                           child: Row(
                                             children: <Widget>[
                                               Text(
-                                                averageVote??"0",
+                                                averageVote ?? "0",
                                                 style: Theme.of(context)
                                                     .textTheme
                                                     .bodyText1,
@@ -100,7 +102,7 @@ abstract class BaseDetailsState<T extends StatefulWidget> extends State<T> {
                                                 .bodyText1,
                                           ),
                                           Text(
-                                            overview??"",
+                                            overview ?? "",
                                             style: Theme.of(context)
                                                 .textTheme
                                                 .caption,
@@ -152,7 +154,7 @@ abstract class BaseDetailsState<T extends StatefulWidget> extends State<T> {
     );
   }
 
-  Widget getAppBarWidget() {
+  Widget getAppBarWidget(BuildContext context) {
     return AppBar(
       backgroundColor: Colors.transparent,
       elevation: 0,
@@ -174,7 +176,7 @@ abstract class BaseDetailsState<T extends StatefulWidget> extends State<T> {
         : GenreList(genres: genres);
   }
 
-  Widget getBackdropWidget(String? backdropPath) {
+  Widget getBackdropWidget(BuildContext context, String? backdropPath) {
     return Column(
       children: <Widget>[
         Expanded(
@@ -223,81 +225,5 @@ abstract class BaseDetailsState<T extends StatefulWidget> extends State<T> {
         )
       ],
     );
-  }
-
-  void modalBottomSheetMenu(Cast cast) {
-    // double height = MediaQuery.of(context).size.height;
-    showModalBottomSheet(
-        context: context,
-        builder: (builder) {
-          return Container(
-            // height: height / 2,
-            color: Colors.transparent,
-            child: Stack(
-              children: <Widget>[
-                Padding(
-                  padding: const EdgeInsets.only(top: 50),
-                  child: Container(
-                      padding: const EdgeInsets.only(top: 54),
-                      decoration: BoxDecoration(
-                          color: Theme.of(context).primaryColor,
-                          borderRadius: const BorderRadius.only(
-                              topLeft: Radius.circular(16.0),
-                              topRight: Radius.circular(16.0))),
-                      child: Center(
-                        child: ListView(
-                          children: <Widget>[
-                            Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Column(
-                                children: <Widget>[
-                                  Text(
-                                    '${cast.name}',
-                                    style:
-                                        Theme.of(context).textTheme.bodyText2,
-                                  ),
-                                  Text(
-                                    'as',
-                                    style:
-                                        Theme.of(context).textTheme.bodyText2,
-                                  ),
-                                  Text(
-                                    '${cast.character}',
-                                    style:
-                                        Theme.of(context).textTheme.bodyText2,
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
-                      )),
-                ),
-                Align(
-                    alignment: Alignment.topCenter,
-                    child: SizedBox(
-                      width: 100,
-                      height: 100,
-                      child: Container(
-                        decoration: BoxDecoration(
-                            color: Theme.of(context).primaryColor,
-                            border: Border.all(
-                                color: Theme.of(context).backgroundColor,
-                                width: 3),
-                            image: DecorationImage(
-                                fit: BoxFit.cover,
-                                image: (cast.profilePath == null
-                                    ? const AssetImage('assets/images/na.jpg')
-                                    : NetworkImage(TMDB_BASE_IMAGE_URL +
-                                        'w500/' +
-                                        cast.profilePath!)) as ImageProvider<
-                                    Object>),
-                            shape: BoxShape.circle),
-                      ),
-                    ))
-              ],
-            ),
-          );
-        });
   }
 }
